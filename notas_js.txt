@@ -69,10 +69,23 @@ Para asignar una función a un prototipo (como un método en POO), se utiliza Pr
 Herencia
 En JavaScript no existe herencia de forma nativa, por lo que es necesario hacer asignaciones a nivel de prototipos
 
+Clases en EMACS
+Con EMACS se utilizan constructores
+Los métodos se definen como funciones dentro de la definición de la clase y no llevan la palabra function
+La herencia se logra colocando la palabra extends en la definición de las clases que heredan
+El constructor de una clase que hereda debe invocar el constructor del padre con super()
+
+Asincronismo
+JavaScript utiliza una pila de ejecución, cada evento asíncrono se coloca ahí y se ejecuta a medida que culmina 
+
+Para ver los argumentos de una función invocada se utiliza la palabra arguments
+
 Bitácora de curso
 12-ago  Parámetros como referencia o como valor
 13-ago  Switch
-14-ago  La verad oculta...
+14-ago  La verdad oculta...
+15-ago  Callbacks
 
 
-18/53
+
+31/53
