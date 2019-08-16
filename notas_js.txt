@@ -80,12 +80,22 @@ JavaScript utiliza una pila de ejecución, cada evento asíncrono se coloca ahí
 
 Para ver los argumentos de una función invocada se utiliza la palabra arguments
 
+Promesas
+Tres estados: pending, fulfilled, rejected
+new Promise(function(resolve, reject) {
+    ..
+}).then(valor => {
+    ..
+}).catch(err) => {
+    ..
+})
+
 Bitácora de curso
 12-ago  Parámetros como referencia o como valor
 13-ago  Switch
 14-ago  La verdad oculta...
 15-ago  Callbacks
-
+16-ago  Promesas encadenadas
 
 
 31/53

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notas del Curso Fundamentos de JavaScript</title>
+</head>
+<body>
+    <h1>Notas del Curso de Fundamentos de JavaScript</h1>
+    <section id="funciones">
+        <h2>Algunas funciones</h2>
+        <ul>
+            <li>
+                toUpperCase()       Convierte todo el texto a mayúsculas
+            </li>
+            <li>                
+                toLowerCase()       Convierte todo el texto a minúsculas
+            </li>
+            <li>
+                charAt(pos)         Obtiene el caracter en la posición pos
+            </li>
+            <li>
+                substr(pos, cant)   Obtiene una sub-cadena a partir de una cadena, a partir de la posición pos y obtiene cant caracteres
+            </li>
+            <li>
+                Math.round(n)       Redondear la variable numérica n
+            </li>
+            <li>
+                numero.toFixed(n)   Convierte número a texto con n decimales
+            </li>
+            <li>
+                parseFloat()        Convierte texto a número flotante
+            </li>
+        </ul>
+
+    </section>
+    
+    <section id="conceptos">
+        <h2>Conceptos varios</h2>
+            <h3>Interpolar texto</h3>
+            <ol>
+                <li>`${nombre} ${apellido}`                     Concatena las variables nombre y apellido con un espacio entre ellas</li>
+                <li>`Mi edad es ${40}` y el dobre es ${40*2}`   Realiza una operación de multiplicación sin escapar del texto</li>
+            </ol>
+
+            <h3>Funciones</h3>
+            <p>Al enviar una variable global como parámetro a una función y modificar dicha variable, el valor modificado solo existe dentro de dicha función y la variable mantiene su valor original</p>
+            
+            <h3>Objetos</h3>
+            <p>Si una función recibe un objeto como parámetro, puede acceder a sus propiedades colocando su nombre entre llaves {}
+            Se puede acceder a una propiedad de un objeto con { atributo } = objeto
+            Al enviar un objeto como parámetro de una función, cualquier modificación afecta al objeto original, funcionando diferente al envío de variables globales
+            El operador ... sirve para copiar el contenido entero de un objeto o arreglo, pero permite modificar valores puntuales</p>
+            
+            <h3>Comparación entre variables</h3>
+            <p>Dos iguales (==) comparan valores sin tomar en cuenta tipos de datos
+            Tres iguales (===) comparan valores tomando en cuenta tipos de datos
+            Las comparaciones entre objetos fallan ya que apuntan a distintas referencias en memoria, a menos que uno haya sido creado a partir del otro</p>
+            
+            Condicionales
+            if (condiciones) { 
+                //código a ejecutarse de cumplirse las condiciones
+            } else{
+                //código a ejecutarse de no cumplirse las condiciones
+            }
+            
+            Funciones que retornan valores
+            Se usa la palabra reservada return
+            
+            Arrow function
+            La definición de las funciones pueden ser asignadas a variables o constantes
+            Se puede usar una sintaxis diferente para acortar las funciones
+            Dentro de su contexto, this corresponde al objeto global, por ejemplo window
+            
+            Debug
+            Se coloca la instrucción "debugger" para indicar que la ejecución debe detenerse
+            En modo debug se pueden colocar breakpoints
+            
+            Condicionales y ciclos
+            if (condición) {
+                //código que se ejecuta si la condición se cumple
+            } else {
+                //código que se ejecuta si la condición no se cumple
+            }
+            for(inicializar variable que cambiará; condición; modificación de variable)
+            while(condición)
+            do while(condición)
+            switch(variable) case caso
+            
+            Arrays
+            personas[0].altura equivale a personas[0]['altura']
+            arreglo.filter se utiliza para retornar un nuevo arreglo a partir de un filtro
+            arreglo.map se utiliza para obtener un arreglo transformado a partir de otro
+            arreglo.reduce se utiliza para retornar un valor único que represente una operación ejecutada sobre los miembros de un arreglo
+            
+            Clases
+            En JavaScript no existen clases como tal, se utilizan prototipos
+            Para crear un objeto a partir de un prototipo se utiliza la palabra reservada new
+            Para asignar una función a un prototipo (como un método en POO), se utiliza Prototipo.prototype.metodo = function() {}
+            
+            Herencia
+            En JavaScript no existe herencia de forma nativa, por lo que es necesario hacer asignaciones a nivel de prototipos
+            
+            Clases en EMACS
+            Con EMACS se utilizan constructores
+            Los métodos se definen como funciones dentro de la definición de la clase y no llevan la palabra function
+            La herencia se logra colocando la palabra extends en la definición de las clases que heredan
+            El constructor de una clase que hereda debe invocar el constructor del padre con super()
+            
+            Asincronismo
+            JavaScript utiliza una pila de ejecución, cada evento asíncrono se coloca ahí y se ejecuta a medida que culmina 
+            
+            Para ver los argumentos de una función invocada se utiliza la palabra arguments
+    </section>
+
+    
+
+    
+    Bitácora de curso
+    12-ago  Parámetros como referencia o como valor
+    13-ago  Switch
+    14-ago  La verdad oculta...
+    15-ago  Callbacks
+    
+    
+    
+    31/53    
+</body>
+</html>
