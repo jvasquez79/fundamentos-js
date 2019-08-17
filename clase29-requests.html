@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 28</title>
+</head>
+<body>
+    <script
+        src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script>
+const API_URL = 'https://swapi.co/api/'
+const PEOPLE_URL = 'people/:id'
+
+const lukeUrl = `${API_URL}${PEOPLE_URL.replace(':id', 1)}`
+const opts = { crossDomain: true }
+
+const onPeopleResponse = function(persona) {
+    //MUY IMPORTANTE! arguments se usa para listar argumentos en una función
+    //console.log(arguments)
+    console.log(`Hola, yo soy ${persona.name}`)
+}
+
+function obtenerPersonaje(id) {
+    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
+    $.get(url, opts, onPeopleResponse)
+}
+
+console.log(obtenerPersonaje(1))
+console.log(obtenerPersonaje(3))
+console.log(obtenerPersonaje(5  ))
+
+    </script>
+</body>
+</html>
