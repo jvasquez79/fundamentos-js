@@ -59,6 +59,7 @@ Arrays
 personas[0].altura equivale a personas[0]['altura']
 arreglo.filter se utiliza para retornar un nuevo arreglo a partir de un filtro
 arreglo.map se utiliza para obtener un arreglo transformado a partir de otro
+Para que funcione, el arreglo original debe contener valores, no puede estar vacío
 arreglo.reduce se utiliza para retornar un valor único que represente una operación ejecutada sobre los miembros de un arreglo
 
 Clases
@@ -89,6 +90,22 @@ new Promise(function(resolve, reject) {
 }).catch(err) => {
     ..
 })
+No todos los navegadores soportan Promesas
+Se puede usar la palabra await para detener la ejecución hasta que algo ocurra, pero la función debe llevar la palabra async en su definición
+
+var, let, const
+Al declarar con var, la variable existe en todo el programa, pero solo tendrá valor en su ámbito
+Al declarar con let, la variable solo existe en el bloque de código donde es utilizada
+Al declarar con const funciona similar a let pero su valor no puede ser modificado; sin embargo, si se declara un arreglo con const, se pueden agregar valores nuevos pero no modificar los existentes
+
+Memorización
+Se utiliza para ahorrar cómputo en operaciones complejas
+Funciona creando un objeto de cache dentro de una función, si no existe, y verificando su valor en cada ejecución
+
+Cambio de contexto
+Con .bind enviamos el contexto como parámetro, pero no se ejecuta la función
+Con .call también se envía el contexto como parámetro pero la función se ejecuta inmediatamente
+.apply es similar a .call pero los otros parámetros se envían como array
 
 Bitácora de curso
 12-ago  Parámetros como referencia o como valor

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 36 - var, let y const</title>
+  </head>
+  <body>
+    <script>
+    const MAYORIA_DE_EDAD = 18
+    //Falla al tratar de modificar el valor de una constante
+    MAYORIA_DE_EDAD = 19
+    for (var i = 0; i < 10; i++) {
+        console.log(i)
+    }
+    console.log(`El valor del contador declarado con var después del for es ${i}`)
+    
+    for (let j = 0; j < 10; j++) {
+        console.log(j)
+    }
+    //Lo siguiente falla porque j solo existe en el ámbito del for
+    console.log(`El valor del contador declarado con let después del for es ${j}`)
+    </script>
+  </body>
+</html>
++

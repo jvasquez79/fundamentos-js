@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 42 - Cambiando el Contexto</title>
+  </head>
+  <body>
+    <script>
+        const javier = {
+            nombre: 'Javier',
+            apellido: 'Vásquez',
+            edad: 40
+        }
+        
+        const arlette = {
+            nombre: 'Arlette',
+            apellido: 'Gutiérrez',
+            edad: 40
+        }
+
+        function saludar(saludo = 'Hola') { //saludo por defecto
+            console.log(`${saludo}, mi nombre es ${this.nombre}`) //this hace referencia a window
+        }
+
+        //const saludarAJavier = saludar.bind(javier)
+        setTimeout(saludar.bind(javier, 'Xopa'), 1000);
+
+        const saludarAJavier = saludar.bind(javier, 'Q\' xopa')
+        const saludarAArlette = saludar.bind(arlette, 'Hello')
+
+        saludarAJavier()
+        saludarAArlette()
+
+        saludar.call(javier)
+        saludar.call(javier, 'Habla')
+
+        saludar.apply(arlette, ['Buenas'])
+    </script>
+  </body>
+</html>

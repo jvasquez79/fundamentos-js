@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 41 - Inmutables</title>
+  </head>
+  <body>
+    <script>
+        const javier = {
+            nombre: 'Javier',
+            apellido: 'Vásquez',
+            edad: 40
+        }
+        //const cumpleanos = persona => persona.edad++ //modifica el valor
+
+        const cumpleanosInmutable = persona => ({
+            ...persona,
+            edad: persona.edad + 1
+        })
+        console.log(javier) //objeto original sin cambios
+        console.log(cumpleanosInmutable(javier)) //copia del objeto original pero con edad modificada
+    </script>
+  </body>
+</html>
++
